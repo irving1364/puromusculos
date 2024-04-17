@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "text": "Ciclos",
+        "path": "/categoria/Ciclos"
+    },
+    {
+        "id": 2,
+        "text": "High-Peptidos",
+        "path": "/categoria/High-Peptidos"
+    },
+    {
+        "id": 3,
+        "text": "Inyectables",
+        "path": "/categoria/Inyectables"
+    },
+    {
+        "id": 4,
+        "text": "Orales",
+        "path": "/categoria/Orales"
+    },
+    {
+        "id": 5,
+        "text": "Quemar Grasas",
+        "path": "/categoria/Quemar Grasas"
+    },
+    {
+        "id": 6,
+        "text": "Sarms",
+        "path": "/categoria/Sarms"
+    }
+]
