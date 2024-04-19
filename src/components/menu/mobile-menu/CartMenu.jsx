@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 import clsx from "clsx";
 import { Offcanvas, OffcanvasHeader, OffcanvasBody } from "@ui/offcanvas";
 import Anchor from "@ui/anchor";

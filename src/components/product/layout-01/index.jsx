@@ -1,13 +1,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import PropTypes from "prop-types";
-import Image from "next/image";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
-import ClientAvatar from "@ui/client-avatar";
-import ProductBid from "@components/product-bid";
-import Button from "@ui/button";
-import { ImageType } from "@utils/types";
 import PlaceBidModal from "@components/modals/placebid-modal";
 
 const CountdownTimer = dynamic(() => import("@ui/countdown/layout-01"), {

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
 
 const SubMenu = ({ menu }) => (

@@ -122,5 +122,11 @@ const MyApp = ({ Component, pageProps }) => {
     );
 };
 
+MyApp.propTypes = {
+    Component: PropTypes.elementType,
+    pageProps: PropTypes.shape({
+        className: PropTypes.string,
+    }),
+};
 
 export default MyApp;

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import Image from "next/image";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
@@ -7,7 +6,6 @@ import ClientAvatar from "@ui/client-avatar";
 import Button from "@ui/button";
 import ShareDropdown from "@components/share-dropdown";
 import PlaceBidModal from "@components/modals/placebid-modal";
-import { ImageType } from "@utils/types";
 
 const Product = ({
     title,
@@ -110,29 +108,5 @@ const Product = ({
     );
 };
 
-Product.propTypes = {
-    className: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    price: PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        currency: PropTypes.string.isRequired,
-    }).isRequired,
-    latestBid: PropTypes.string.isRequired,
-    image: ImageType.isRequired,
-    authors: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            slug: PropTypes.string.isRequired,
-            image: ImageType.isRequired,
-        })
-    ),
-    bitCount: PropTypes.number,
-    likeCount: PropTypes.number,
-};
-
-Product.defaultProps = {
-    likeCount: 0,
-};
 
 export default Product;
