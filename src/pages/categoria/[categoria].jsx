@@ -15,7 +15,7 @@ import productData from "../../data/products.json";
 import homepageData from "../../data/homepages/home-16.json";
 import { normalizedData } from "@utils/methods";
 
-const categoria = ({ productos, categorias, categoriaMadre }) => {
+const categoria = ({ productos, categorias, categoriaMadre, agregarCarrito }) => {
     const content = normalizedData(homepageData?.content || []);
     console.log(productos);
 
@@ -34,6 +34,7 @@ const categoria = ({ productos, categorias, categoriaMadre }) => {
                         data={{
                             section_title: { title: categoriaMadre },
                             products: productos,
+                            agregarCarrito: agregarCarrito
                         }}
                     />
 

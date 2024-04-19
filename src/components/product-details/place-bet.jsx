@@ -12,11 +12,12 @@ const Countdown = dynamic(() => import("@ui/countdown/layout-02"), {
     ssr: false,
 });
 
-const PlaceBet = ({ highest_bid, auction_date, btnColor, className }) => {
+const PlaceBet = ({ highest_bid, auction_date, btnColor, className, prod, agregarCarrito }) => {
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
     };
+
     return (
         <>
             <div className={clsx("place-bet-area", className)}>
@@ -24,28 +25,15 @@ const PlaceBet = ({ highest_bid, auction_date, btnColor, className }) => {
                 <Button
                     color={btnColor || "primary-alta"}
                     className=""
-                    onClick={handleBidModal}
+                    onClick={() => agregarCarrito(prod)}
                 >
                     Agregar al Carrito
                 </Button>
             </div>
-            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
     );
 };
 
-PlaceBet.propTypes = {
-    highest_bid: PropTypes.shape({
-        amount: PropTypes.string,
-        bidder: PropTypes.shape({
-            name: PropTypes.string,
-            image: ImageType,
-            slug: PropTypes.string,
-        }),
-    }),
-    auction_date: PropTypes.string,
-    btnColor: PropTypes.string,
-    className: PropTypes.string,
-};
+
 
 export default PlaceBet;

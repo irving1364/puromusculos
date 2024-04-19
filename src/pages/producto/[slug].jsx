@@ -11,7 +11,7 @@ import { shuffleArray } from "@utils/methods";
 // demo data
 import productData from "../../data/products.json";
 
-const ProductDetails = ({ prducto, nombre, }) => {
+const ProductDetails = ({ prducto, nombre, agregarCarrito }) => {
 
     console.log(prducto);
 
@@ -25,7 +25,7 @@ const ProductDetails = ({ prducto, nombre, }) => {
                     currentPage={nombre}
                 />
 
-                <ProductDetailsArea product={prducto} />
+                <ProductDetailsArea product={prducto} agregarCarrito={agregarCarrito} />
                 {/*
             <ProductArea
                 data={{

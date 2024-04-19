@@ -26,7 +26,8 @@ export async function getStaticProps() {
     };
 }
 
-const Home = () => {
+const Home = ({ agregarCarrito }) => {
+    console.log(agregarCarrito)
     const content = normalizedData(homepageData?.content || []);
     const liveAuctionData = productData.filter(
         (prod) =>
@@ -57,6 +58,7 @@ const Home = () => {
                     data={{
                         ...content["newest-section"],
                         products: newestData,
+                        agregarCarrito: agregarCarrito,
                     }}
                 />
 

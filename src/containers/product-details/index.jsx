@@ -15,7 +15,8 @@ import { useState } from "react";
 
 // Demo Image
 
-const ProductDetailsArea = ({ space, className, product }) => {
+const ProductDetailsArea = ({ space, className, product, agregarCarrito }) => {
+
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
@@ -65,7 +66,7 @@ const ProductDetailsArea = ({ space, className, product }) => {
                             >
                                 Agregar al Carrito
                             </Button>*/}
-                            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
+
                             <div className="rn-bid-details">
                                 {/*
                             <BidTab
@@ -78,6 +79,8 @@ const ProductDetailsArea = ({ space, className, product }) => {
                                 <PlaceBet
                                     highest_bid={product.highest_bid}
                                     auction_date={product?.auction_date}
+                                    prod={product}
+                                    agregarCarrito={agregarCarrito}
                                 />
 
                             </div>

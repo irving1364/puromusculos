@@ -6,6 +6,7 @@ import Web3 from "web3";
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
+import CartMenu from "@components/menu/mobile-menu/CartMenu";
 import SearchForm from "@components/search-form/layout-01";
 import FlyoutSearchForm from "@components/search-form/layout-02";
 import UserDropdown from "@components/user-dropdown";
@@ -58,8 +59,6 @@ const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
     const { search, searchHandler } = useFlyoutSearch();
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [ethBalance, setEthBalance] = useState("");
 
     const detectCurrentProvider = () => {
         let provider;
@@ -154,10 +153,10 @@ const Header = ({ className }) => {
 
                             <div className="setting-option rn-icon-list notification-badge">
                                 <div className="icon-box">
-                                    <Anchor path="/">
+                                    <a>
                                         <FaCartArrowDown />
-                                        <span className="badge">5</span>
-                                    </Anchor>
+                                        {/*      <span className="badge">5</span>   */}
+                                    </a>
                                 </div>
                             </div>
                             <div className="setting-option mobile-menu-bar d-block d-xl-none">
@@ -181,6 +180,7 @@ const Header = ({ className }) => {
                 menu={menuData}
                 logo={headerData.logo}
             />
+
         </>
     );
 };

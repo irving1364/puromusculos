@@ -35,10 +35,10 @@ const ProductArea = ({ space, className, data }) => (
                             slug={prod.slug}
                             latestBid="34"
                             price={prod.price}
-
+                            prod={prod}
                             auction_date={prod.auction_date}
                             image={prod.images?.[0]}
-
+                            agregarCarrito={data.agregarCarrito}
 
                         />
                     </div>

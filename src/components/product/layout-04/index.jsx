@@ -8,7 +8,8 @@ import Button from "@ui/button";
 import ShareDropdown from "@components/share-dropdown";
 import PlaceBidModal from "@components/modals/placebid-modal";
 import { ImageType } from "@utils/types";
-import { FaCartPlus } from "react-icons/fa";
+
+import { MdDelete } from "react-icons/md";
 
 const Product = ({
     title,
@@ -16,14 +17,14 @@ const Product = ({
     price,
     latestBid,
     image,
-    prod,
     authors,
     bitCount,
     likeCount,
     className,
-    agregarCarrito,
+    cantidad,
+    producto,
+    eliminarProducto
 }) => {
-    console.log(agregarCarrito)
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
@@ -32,10 +33,11 @@ const Product = ({
         <>
             <div className={clsx("lg-product-wrapper", className)}>
                 <div className="inner">
+                    <p></p>
                     <div className="lg-left-content">
                         {image?.src && (
                             <Anchor
-                                path={`/producto/${title}`}
+                                path={`/product/${slug}`}
                                 className="thumbnail"
                             >
                                 <img
@@ -48,32 +50,61 @@ const Product = ({
                         )}
                         <div className="read-content">
                             <div className="product-share-wrapper">
+                                <div className="profile-share">
 
+
+                                </div>
                                 <div className="last-bid">
-                                    {price}
-                                    $
+                                    {price}$
                                 </div>
                             </div>
-                            <Anchor path={`/producto/${title}`}>
+                            <Anchor path={`/product/${slug}`}>
                                 <h6 className="title">{title}</h6>
-
                             </Anchor>
-                            <h4><FaCartPlus onClick={() => agregarCarrito(prod)} />
-                            </h4>
-                        </div>
 
+
+                            {/* 
+                            <div className="share-wrapper d-flex">
+                                <div className="react-area mr--15">
+                                    <span className="number">-</span>
+                                </div>
+                                <span className="latest-bid">
+                                    Cantidad: {cantidad}
+                                </span>
+                                <div className="react-area ml--15">
+                                    <span className="number">+</span>
+                                </div>
+                            </div>
+
+
+
+                            <br />
+
+                            <span className="latest-bid">
+                                Total: {price * cantidad}
+                            </span>
+                            */}
+                            <Button onClick={() => eliminarProducto(producto.id)} color="primary-alta" size="small">
+                                Eliminar <MdDelete />
+                            </Button>
+
+
+                        </div>
                     </div>
 
-                    {/*
-                    <Button
-                        color="primary-alta"
-                        size="small"
-                        className="mr--30 bid-btn"
-                        onClick={handleBidModal}
-                    >
-                        Comprar
-                    </Button>
-                     */}
+                    <div className="product-share-wrapper">
+                        {/*
+                        <Button
+                            color="primary"
+                            size=""
+                            className="mr--10 "
+                            onClick={handleBidModal}
+                        >
+                            Eliminar
+                        </Button>*/}
+                    </div>
+
+
 
                 </div>
             </div>

@@ -50,9 +50,6 @@
         width: auto;
         padding: 0 30px;
     }
-
-
-
 }
 
 .right-fix-notice {
@@ -66,8 +63,8 @@
     border-radius: 0 0 0 5px;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 55vh;
-    min-height: 55vh;
+    height: 0vh;
+    min-height: 0vh;
 
     @media #{$lg-layout} {
         position: static;
@@ -203,7 +200,6 @@
         }
     }
 }
-
 
 .rn-notification-wrapper {
     &.creators {

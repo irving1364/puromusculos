@@ -5,6 +5,8 @@ import SectionTitle from "@components/section-title/layout-02";
 import Anchor from "@ui/anchor";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+import { FaCartArrowDown } from "react-icons/fa";
+
 
 
 const CountdownTimer = dynamic(() => import("@ui/countdown/layout-01"), {
@@ -16,11 +18,11 @@ const ShareDropdown = dynamic(() => import("@components/share-dropdown"), {
 });
 
 
-const ProductArea = ({ space, className, data, productos }) => {
+const ProductArea = ({ space, className, data, productos, agregarCarrito }) => {
 
     const [allProducts, setProducts] = useState([]);
     const [isLoad, setIsLoad] = useState(false);
-
+    console.log(data.agregarCarrito);
     useEffect(() => {
         obtenerDatos();
 
@@ -130,22 +132,10 @@ const ProductArea = ({ space, className, data, productos }) => {
                                     <span className="latest-bid">{prod.price}</span>
                                     <div className="share-wrapper d-flex">
                                         <div className="react-area mr--15">
-                                            <svg
-                                                viewBox="0 0 17 16"
-                                                fill="none"
-                                                width="16"
-                                                height="16"
-                                                className="sc-bdnxRM sc-hKFxyN kBvkOu"
-                                            >
-                                                <path
-                                                    d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                                                    stroke="currentColor"
-                                                    strokeWidth="2"
-                                                />
-                                            </svg>
-                                            <span className="number">1</span>
+                                            <h5>
+                                                <FaCartArrowDown className="" onClick={() => data.agregarCarrito(prod)} />
+                                            </h5>
                                         </div>
-                                        <ShareDropdown />
                                     </div>
 
                                 </div>
