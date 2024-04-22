@@ -2,8 +2,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import Button from "@ui/button";
-import ShareDropdown from "@components/share-dropdown";
-import { ImageType } from "@utils/types";
+
 
 import { MdDelete } from "react-icons/md";
 
@@ -21,10 +20,11 @@ const Product = ({
     producto,
     eliminarProducto
 }) => {
+    /*
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
         setShowBidModal((prev) => !prev);
-    };
+    };*/
     return (
         <>
             <div className={clsx("lg-product-wrapper", className)}>
@@ -104,7 +104,6 @@ const Product = ({
 
                 </div>
             </div>
-            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
     );
 };
