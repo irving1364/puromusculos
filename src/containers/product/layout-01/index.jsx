@@ -1,16 +1,9 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
 import Nav from "react-bootstrap/Nav";
 import Product from "@components/product/layout-04";
 import NotificationArea from "@containers/notification";
-import CreatorArea from "@containers/creator/layout-02";
-import {
-    ProductType,
-    SectionTitleType,
-    NotifactionType,
-    SellerType,
-} from "@utils/types";
+
 import { shuffleArray } from "@utils/methods";
 
 const TabContent = dynamic(() => import("react-bootstrap/TabContent"), {
