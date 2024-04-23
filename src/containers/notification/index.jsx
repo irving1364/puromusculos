@@ -135,7 +135,7 @@ const NotificationArea = ({ data }) => {
 
             let productosParaWsp = prodsCart.map(producto => producto.name);
             console.log(JSON.stringify(productosParaWsp));
-            window.location.href = 'https://wa.me/send/?phone=584125735972&text=Me%20interesan%20los%20siguientes%20productos' + ' ' + JSON.stringify(productosParaWsp) // Comento esta línea para no redirigir realmente en este ejemplo
+            window.location.href = 'https://wa.me/send/?phone=13412082952&text=Me%20interesan%20los%20siguientes%20productos' + ' ' + JSON.stringify(productosParaWsp) // Comento esta línea para no redirigir realmente en este ejemplo
 
 
             data.vaciarCarrito([]);
