@@ -4,6 +4,9 @@ import ErrorText from "@ui/error-text";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ContactForm = () => {
     const {
         register,
@@ -25,120 +28,117 @@ const ContactForm = () => {
             form.reset();
         }
     };
-    const onSubmit = (data, e) => {
-        const form = e.target;
-        setServerState({ submitting: true });
-        axios({
-            method: "post",
-            url: "https://getform.io/f/7a6695a7-c8e3-442c-bc2f-d46d3b9a535e",
-            data,
-        })
-            .then((_res) => {
-                handleServerResponse(true, "Thanks! for being with us", form);
-            })
-            .catch((err) => {
-                handleServerResponse(false, err.response.data.error, form);
-            });
-    };
+    const onSubmit = async (e) => {
+        console.log(e)
+
+        const form = new FormData();
+        form.append("your-name", e.nombre);
+        form.append("your-email", e.correo);
+        form.append("your-subject", e.asunto);
+        form.append("your-message", e.mensaje);
+
+        var requestOptions = {
+            method: 'POST',
+            body: form,
+            redirect: 'follow'
+        };
+
+        fetch("https://fadimet.com.pa/alberto/wp-json/contact-form-7/v1/contact-forms/937/feedback", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+        toast("Se envio su información");
+        setTimeout(function () {
+            window.location.href = "/";
+        }, 4000);
+
+    }
+
+
+
     return (
         <div className="form-wrapper-one registration-area">
-            <h3 className="mb--30">Contact Us</h3>
+            <h3 className="mb--30">Contactanos</h3>
             <form
                 className="rwt-dynamic-form"
                 id="contact-form"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className="mb-5">
-                    <label htmlFor="contact-name" className="form-label">
-                        Your Name
+                    <label htmlFor="nombre" className="form-label">
+                        Tu nombre
                     </label>
                     <input
-                        id="contact-name"
+                        id="nombre"
                         type="text"
-                        {...register("contactName", {
-                            required: "Name is required",
+                        {...register("nombre", {
+                            required: "Nombre es requerido",
                         })}
                     />
-                    {errors.contactName && (
-                        <ErrorText>{errors.contactName?.message}</ErrorText>
+                    {errors.nombre && (
+                        <ErrorText>{errors.nombre?.message}</ErrorText>
                     )}
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="contact-email" className="form-label">
-                        Email
+                    <label htmlFor="correo" className="form-label">
+                        Correo
                     </label>
                     <input
-                        name="contact-email"
+                        name="correo"
                         type="email"
-                        {...register("contactEmail", {
-                            required: "Email is required",
+                        {...register("correo", {
+                            required: "Correo es requerido",
                             pattern: {
                                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                message: "invalid email address",
+                                message: "Correo invalido",
                             },
                         })}
                     />
-                    {errors.contactEmail && (
-                        <ErrorText>{errors.contactEmail?.message}</ErrorText>
+                    {errors.correo && (
+                        <ErrorText>{errors.correo?.message}</ErrorText>
                     )}
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="subject" className="form-label">
-                        Subject
+                    <label htmlFor="asunto" className="form-label">
+                        Asunto
                     </label>
                     <input
-                        name="subject"
+                        name="asunto"
                         type="text"
-                        {...register("subject", {
-                            required: "Subject is required",
+                        {...register("asunto", {
+                            required: "Asunto es requerido",
                         })}
                     />
-                    {errors.subject && (
-                        <ErrorText>{errors.subject?.message}</ErrorText>
+                    {errors.asunto && (
+                        <ErrorText>{errors.asunto?.message}</ErrorText>
                     )}
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="contact-message" className="form-label">
-                        Write Message
+                    <label htmlFor="mensaje" className="form-label">
+                        Mensaje
                     </label>
                     <textarea
-                        id="contact-message"
+                        id="mensaje"
                         rows="3"
-                        {...register("contactMessage", {
-                            required: "Message is required",
+                        {...register("mensaje", {
+                            required: "Mensaje es requerido",
                         })}
                     />
-                    {errors.contactMessage && (
-                        <ErrorText>{errors.contactMessage?.message}</ErrorText>
+                    {errors.mensaje && (
+                        <ErrorText>{errors.mensaje?.message}</ErrorText>
                     )}
                 </div>
-                <div className="mb-5 rn-check-box">
-                    <input
-                        id="condition"
-                        type="checkbox"
-                        className="rn-check-box-input"
-                        {...register("condition", {
-                            required: "Condition is required",
-                        })}
-                    />
-                    <label htmlFor="condition" className="rn-check-box-label">
-                        Allow to all tearms & condition
-                    </label>
-                    <br />
-                    {errors.condition && (
-                        <ErrorText>{errors.condition?.message}</ErrorText>
-                    )}
-                </div>
+
                 <Button type="submit" size="medium">
-                    Send Message
+                    Enviar Mensaje
                 </Button>
                 {serverState.status && (
                     <p
-                        className={`mt-4 font-14 ${
-                            !serverState.status.ok
-                                ? "text-danger"
-                                : "text-success"
-                        }`}
+                        className={`mt-4 font-14 ${!serverState.status.ok
+                            ? "text-danger"
+                            : "text-success"
+                            }`}
                     >
                         {serverState.status.msg}
                     </p>

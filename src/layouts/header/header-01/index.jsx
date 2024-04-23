@@ -21,6 +21,8 @@ import menuData from "../../../data/general/menu-01.json";
 import { FaCartArrowDown } from "react-icons/fa";
 
 
+import Link from 'next/link';
+
 
 
 const Header = ({ className }) => {
@@ -153,10 +155,11 @@ const Header = ({ className }) => {
 
                             <div className="setting-option rn-icon-list notification-badge">
                                 <div className="icon-box">
-                                    <a>
+                                    <a href="/carrito">
                                         <FaCartArrowDown />
                                         {/*      <span className="badge">5</span>   */}
                                     </a>
+
                                 </div>
                             </div>
                             <div className="setting-option mobile-menu-bar d-block d-xl-none">

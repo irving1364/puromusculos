@@ -19,11 +19,9 @@ const ContactTopArea = ({ space, className }) => (
                     data-sal-duration="800"
                 >
                     <div className="section-title mb--30 text-center">
-                        <h2 className="title">Quick Contact Address</h2>
+                        <h2 className="title">Ponte en contacto con Nosotros</h2>
                         <p className="description">
-                            There are many variations of passages of Lorem Ipsum
-                            available, <br /> but the majority have suffered
-                            alteration.
+                            Tenemos a tu disposición multiples canales de comunicación <br /> donde estaremos en el total compromiso de atenderte!
                         </p>
                     </div>
                 </div>
@@ -37,8 +35,8 @@ const ContactTopArea = ({ space, className }) => (
                 >
                     <AddressBox
                         icon="feather-headphones"
-                        title="Contact Phone Number"
-                        phoneNumbers={["+444 555 666 777", "+222 222 222 333"]}
+                        title="Contacto Telefonico"
+                        phoneNumbers={["+1 (341) 208-2952"]}
                     />
                 </div>
                 <div
@@ -49,8 +47,8 @@ const ContactTopArea = ({ space, className }) => (
                 >
                     <AddressBox
                         icon="feather-mail"
-                        title="Our Email Address"
-                        emails={["admin@gmail.com", "example@gmail.com"]}
+                        title="Nuestro Correo"
+                        emails={["Puromusculosoficial@hotmail.com"]}
                     />
                 </div>
                 <div
@@ -60,9 +58,9 @@ const ContactTopArea = ({ space, className }) => (
                     data-sal-duration="800"
                 >
                     <AddressBox
-                        icon="feather-map-pin"
-                        title="Our Location"
-                        address="5678 Bangla Main Road, cities 580 <br> GBnagla, example 54786"
+                        icon="feather-send"
+                        title="Telegram"
+                        address="@roidlabs"
                     />
                 </div>
             </div>

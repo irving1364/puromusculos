@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const AddressBox = ({
     className,
