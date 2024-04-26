@@ -73,9 +73,9 @@ const NotificationArea = ({ data }) => {
 
 
         var data3 = {
-            payment_method: "bacs",
-            payment_method_title: "Direct Bank Transfer",
-            set_paid: true,
+            payment_method: "",
+            payment_method_title: "",
+            set_paid: false,
             customer_note: e.mensaje,
             billing: {
                 first_name: e.nombre,
@@ -103,6 +103,11 @@ const NotificationArea = ({ data }) => {
                 prodItems
             ,
             shipping_lines: [
+                {
+                    method_id: "flat_rate",
+                    method_title: "Envio",
+                    total: "15.00"
+                }
             ]
         };
 
@@ -126,16 +131,43 @@ const NotificationArea = ({ data }) => {
         console.log(resulta)
         if (resulta.message) {
             toast("Ocurrio un problema creando la cotización");
-
-
         }
+
+
+
         if (resulta.status) {
             toast("Se creo su cotización, pronto lo contataremos");
+
+            let mensajeProd = "%2A";
+            let misDatos = "%2A";
+
+            for (var i = 0; i < prodsCart.length; i++) {
+
+                mensajeProd = mensajeProd + prodsCart[i].name + "%20" + prodsCart[i].price + "%0A";
+            }
+
+            mensajeProd = mensajeProd + "Envio " + "%20" + "15.00" + "%0A";
+
+            let totalEnvio = total + 15;
+
+            mensajeProd = mensajeProd + "Total a Pagar" + "%20" + totalEnvio + "%0A";
+
+            misDatos = "Mis datos Personales%0A";
+            misDatos = misDatos + "Mi nombre:" + "%20" + e.nombre + "%0A";
+            misDatos = misDatos + "Mi Telefono:" + "%20" + e.telefono + "%0A";
+            misDatos = misDatos + "Mi Correo:" + "%20" + e.correo + "%0A";
+            misDatos = misDatos + "Mi Direccion:" + "%20" + e.direccion + "%0A";
+            misDatos = misDatos + "Mi Mensaje:" + "%20" + e.mensaje + "%0A";
+
+
+
+
+
 
 
             let productosParaWsp = prodsCart.map(producto => producto.name);
             console.log(JSON.stringify(productosParaWsp));
-            window.location.href = 'https://wa.me/send/?phone=13412082952&text=Me%20interesan%20los%20siguientes%20productos' + ' ' + JSON.stringify(productosParaWsp) // Comento esta línea para no redirigir realmente en este ejemplo
+            window.location.href = 'https://wa.me/send/?phone=13412082952&text=Saludos, Me%20interesan%20los%20siguientes%20items%0AProductos:%0A' + ' ' + mensajeProd + ' ' + misDatos // Comento esta línea para no redirigir realmente en este ejemplo
 
 
             data.vaciarCarrito([]);
@@ -183,20 +215,34 @@ const NotificationArea = ({ data }) => {
             <div className="rn-notification-area right-fix-notice">
                 <div className="h--100">
                     <div className="notice-heading">
-                        <h4>Total a Pagar:</h4>
-                        <Button onClick={() => eliminarProducto(producto.id)} color="primary" size="small">
+
+                        <h4>Sub Total:</h4>
+                        <Button color="primary" size="small">
                             {total} $
                         </Button>
 
 
+                    </div>
+
+                    <div className="notice-heading">
+
+                        <h4>Envio:</h4>
+                        <Button color="primary" size="small">
+                            {15} $
+                        </Button>
+
 
                     </div>
 
+                    <div className="notice-heading">
+
+                        <h4>Total a Pagar:</h4>
+                        <Button color="primary" size="small">
+                            {total + 15} $
+                        </Button>
 
 
-
-
-
+                    </div>
                 </div>
 
             </div>
@@ -210,7 +256,7 @@ const NotificationArea = ({ data }) => {
 
 
 
-            <div className="form-wrapper-one registration-area">
+            <div className="form-wrapper-one registration-area mt--100">
                 <h3 className="mb--30">Cotizar</h3>
                 <form
                     className="rwt-dynamic-form"
