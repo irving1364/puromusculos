@@ -47,7 +47,7 @@ const ProductDetailsArea = ({ space, className, product, agregarCarrito }) => {
                             <span className="bid">
 
                                 <h4 className="price">
-                                    {product.price} $
+                                    {product.price} €
                                 </h4>
                             </span>
                             <div dangerouslySetInnerHTML={{ __html: product.description }}></div>

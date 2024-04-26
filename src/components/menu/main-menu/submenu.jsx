@@ -5,7 +5,7 @@ const SubMenu = ({ menu }) => (
 
     <li >
         <Anchor
-            path={menu}
+            path={"/categoria/" + menu}
             className="live-expo"
         >
             {menu}

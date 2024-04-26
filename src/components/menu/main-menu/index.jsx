@@ -6,23 +6,15 @@ const MainMenu = ({ menu, inyectable }) => (
 
     <ul className="mainmenu">
 
-        <li
-            className=" has-menu-child-item with-megame"
-        >
-            <Link legacyBehavior href="/categoria/Ciclos">
-                Ciclos
-            </Link>
-        </li>
 
         <li
-            className=" has-menu-child-item with-megame"
+            className=" with-megame"
         >
-            <Link legacyBehavior href="/categoria/Hgh-Peptidos">
-                Hgh-Peptidos
+            <Link legacyBehavior href="/categoria/Sarms">
+                Sarms
+
             </Link>
         </li>
-
-
 
         <li
             className="has-droupdown has-menu-child-item with-megame"
@@ -49,21 +41,26 @@ const MainMenu = ({ menu, inyectable }) => (
         <li
             className=" has-menu-child-item with-megame"
         >
+            <Link legacyBehavior href="/categoria/Hgh-Peptidos">
+                Hgh-Peptidos
+            </Link>
+        </li>
+
+        <li
+            className=" has-menu-child-item with-megame"
+        >
             <Link legacyBehavior href="/categoria/Quemar Grasas">
                 Quemar Grasas
             </Link>
         </li>
 
         <li
-            className=" with-megame"
+            className=" has-menu-child-item with-megame"
         >
-            <Link legacyBehavior href="/categoria/Sarms">
-                Sarms
-
+            <Link legacyBehavior href="/categoria/Ciclos">
+                Ciclos
             </Link>
         </li>
-
-
 
 
     </ul>

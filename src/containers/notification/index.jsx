@@ -218,7 +218,7 @@ const NotificationArea = ({ data }) => {
 
                         <h4>Sub Total:</h4>
                         <Button color="primary" size="small">
-                            {total} $
+                            {total} €
                         </Button>
 
 
@@ -228,7 +228,7 @@ const NotificationArea = ({ data }) => {
 
                         <h4>Envio:</h4>
                         <Button color="primary" size="small">
-                            {15} $
+                            {15} €
                         </Button>
 
 
@@ -238,7 +238,7 @@ const NotificationArea = ({ data }) => {
 
                         <h4>Total a Pagar:</h4>
                         <Button color="primary" size="small">
-                            {total + 15} $
+                            {total + 15} €
                         </Button>
 
 

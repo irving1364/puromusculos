@@ -19,32 +19,32 @@
             {
                 "id": 1,
                 "text": "Ciclos",
-                "path": "/"
+                "path": "/categoria/ciclos"
             },
             {
                 "id": 2,
                 "text": "High-Peptidos",
-                "path": "/"
+                "path": "/categoria/High-Peptidos"
             },
             {
                 "id": 3,
                 "text": "Inyectable",
-                "path": "/"
+                "path": "/categoria/Inyectables"
             },
             {
                 "id": 4,
                 "text": "Orales",
-                "path": "/"
+                "path": "/categoria/Orales"
             },
             {
                 "id": 5,
                 "text": "Quemar Grasas",
-                "path": "/"
+                "path": "/categoria/quemar grasas"
             },
             {
                 "id": 6,
                 "text": "Sarms",
-                "path": "/"
+                "path": "/categoria/sarms"
             }
         ]
     },
