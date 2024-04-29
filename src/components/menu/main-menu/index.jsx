@@ -41,16 +41,16 @@ const MainMenu = ({ menu, inyectable }) => (
         <li
             className=" has-menu-child-item with-megame"
         >
-            <Link legacyBehavior href="/categoria/hgh-peptidos">
-                Hgh-peptidos
+            <Link legacyBehavior href="/categoria/hgh-peptido">
+                Hgh-peptido
             </Link>
         </li>
 
         <li
             className=" has-menu-child-item with-megame"
         >
-            <Link legacyBehavior href="/categoria/Quemar Grasas">
-                Quemar Grasas
+            <Link legacyBehavior href="/categoria/Quema Grasas">
+                Quema Grasas
             </Link>
         </li>
 

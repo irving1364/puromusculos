@@ -51,7 +51,7 @@ const Product = ({
 
                                 <div className="last-bid">
                                     {price}
-                                    $
+                                    €
                                 </div>
                             </div>
                             <Anchor path={`/producto/${title}`}>
