@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
+import Link from "next/link";
 
 const InformationWidget = ({ data }) => (
     <div className="footer-widget widget-information">
@@ -8,7 +9,15 @@ const InformationWidget = ({ data }) => (
             <ul className="footer-list-one">
                 {data.menu.map((nav) => (
                     <li key={nav.id} className="single-list">
-                        <Anchor path={nav.path}>{nav.text}</Anchor>
+                        <Link
+                            rel="preload"
+                            href={nav.path}
+                            className="text-primary"
+                            aria-label="label"
+                        >
+                            {nav.text}
+                        </Link>
+
                     </li>
                 ))}
             </ul>

@@ -5,6 +5,7 @@ import Anchor from "@ui/anchor";
 import Logo from "@components/logo";
 import { slideToggle, slideUp } from "@utils/methods";
 import SubMenu from "./submenu";
+import SubMenuMobile from "./submenumobile";
 import MegaMenu from "./megamenu";
 
 const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
@@ -59,7 +60,7 @@ const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
                                         {nav.text}
                                     </Anchor>
                                     {nav?.submenu && (
-                                        <SubMenu menu={nav.submenu} />
+                                        <SubMenuMobile menu={nav.submenu} />
                                     )}
                                     {nav?.megamenu && (
                                         <MegaMenu menu={nav.megamenu} />

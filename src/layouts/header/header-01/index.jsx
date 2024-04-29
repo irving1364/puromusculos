@@ -29,7 +29,10 @@ const Header = ({ className }) => {
 
 
     const [allInyectable, setInyectable] = useState([]);
+    const [menuMobile, setMenu] = useState(menuData);
     const [isLoad, setIsLoad] = useState(false);
+
+    console.log(menuMobile);
 
     useEffect(() => {
         obtenerDatos();
@@ -45,15 +48,26 @@ const Header = ({ className }) => {
             headers: myHeaders,
             redirect: 'follow'
         };
-
-
         const data = await fetch("https://fadimet.com.pa/alberto/index.php//wp-json/wc/v3/products/categories?per_page=99&parent=20", requestOptions)
         const result = await data.json();
         console.log(result);
         setInyectable(result)
         setIsLoad(true)
 
+        for (let i = 0; i < menuMobile.length; i++) {
+            if (
+                (menuMobile[i].text === 'Inyectables')
+            ) {
+                menuMobile[i].submenu = result;
+            }
+        }
+
+        console.log(menuMobile);
+
+
     }
+
+
 
 
 

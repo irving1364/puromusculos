@@ -19,7 +19,7 @@ const MainMenu = ({ menu, inyectable }) => (
         <li
             className="has-droupdown has-menu-child-item with-megame"
         >
-            <Link legacyBehavior href="/categoria/InyectablesOrales">
+            <Link legacyBehavior href="/categoria/Inyectables">
                 Inyectables
             </Link>
             <ul className="submenu">
@@ -41,8 +41,8 @@ const MainMenu = ({ menu, inyectable }) => (
         <li
             className=" has-menu-child-item with-megame"
         >
-            <Link legacyBehavior href="/categoria/Hgh-Peptidos">
-                Hgh-Peptidos
+            <Link legacyBehavior href="/categoria/hgh-peptidos">
+                Hgh-peptidos
             </Link>
         </li>
 

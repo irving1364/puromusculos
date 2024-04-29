@@ -48,7 +48,7 @@ const Home = ({ agregarCarrito }) => {
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />
 
-                <CategoryArea data={content["category-section"]} />
+                <CategoryArea className="d-none d-lg-block" data={content["category-section"]} />
 
 
                 {/*<ServiceArea data={content["service-section"]} />*/}

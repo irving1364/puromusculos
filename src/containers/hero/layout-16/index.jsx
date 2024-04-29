@@ -49,7 +49,7 @@ const HeroArea = ({
                                 </Button>
                             ))}
                         </div>
-                        <div className="odometer-area-slide ">
+                        <div className="odometer-area-slide d-none d-lg-block">
                             {items?.map((item, i) => (
                                 <FunFact
                                     data-sal-delay={400 + i * 200}
@@ -113,7 +113,7 @@ const HeroArea = ({
                                             path="/author"
                                             tabIndex="0"
                                         >
-                                            More Then 25K
+                                            Más de 2K
                                         </Anchor>
                                     </div>
                                 </div>

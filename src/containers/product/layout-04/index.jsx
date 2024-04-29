@@ -129,7 +129,7 @@ const ProductArea = ({ space, className, data, productos, agregarCarrito }) => {
                                     <Anchor path={`/producto/${prod.name}`}>
                                         <span className="product-name">{prod.name}</span>
                                     </Anchor>
-                                    <span className="latest-bid">{prod.price}</span>
+                                    <span className="latest-bid">{prod.price} €</span>
                                     <div className="share-wrapper d-flex">
                                         <div className="react-area mr--15">
                                             <h5>
