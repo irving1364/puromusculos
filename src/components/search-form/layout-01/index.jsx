@@ -14,7 +14,7 @@ const SearchForm = () => {
     }
 
     return (
-        <form className="search-form-wrapper" action="#">
+        <form className="search-form-wrapper" action={"/busqueda/" + inputValue}>
             <input type="search" placeholder="Buscar Productos..." aria-label="Search" onChange={onChangeHandler}
                 value={inputValue} />
             <div className="search-icon">

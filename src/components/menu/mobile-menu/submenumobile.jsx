@@ -1,17 +1,20 @@
+import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
 
 const SubMenuMobile = ({ menu }) => (
     <ul className="submenu mobile-menu-children">
         {menu.map((nav) => (
             <li key={nav.id}>
-                <Anchor path={'/categoria/' + nav.name}>
+                <a href={'/categoria/' + nav.name}>
                     {nav.name}
-                </Anchor>
+                </a>
             </li>
         ))}
     </ul >
 );
 
-
+SubMenuMobile.propTypes = {
+    menu: PropTypes.arrayOf(PropTypes.shape({})),
+}
 
 export default SubMenuMobile;

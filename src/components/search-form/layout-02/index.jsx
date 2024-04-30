@@ -21,6 +21,7 @@ const SearchForm = ({ isOpen }) => {
         <form
             id="header-search-1"
             className={clsx("large-mobile-blog-search", isOpen && "active")}
+            action={"/busqueda/" + inputValue}
         >
             <div className="rn-search-mobile form-group">
 
@@ -28,7 +29,7 @@ const SearchForm = ({ isOpen }) => {
 
                 <button type="button" className="search-button">
                     <a className="search-button text-dark mb--10" href={"/busqueda/" + inputValue}>
-                        <i className="feather-search text-dark" />
+                        <i className="feather-search text-dark text-primary" />
                     </a>
                 </button>
                 <input type="text" onChange={onChangeHandler} value={inputValue} placeholder="Buscar Productos..." />

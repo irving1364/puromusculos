@@ -48,17 +48,14 @@ const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
                                     id={nav.id}
                                     key={nav.id}
                                 >
-                                    <Anchor
+                                    <a
                                         className="nav-link its_new"
                                         path={hasChildren ? "#!" : nav.path}
-                                        onClick={
-                                            hasChildren
-                                                ? onClickHandler
-                                                : (e) => e
-                                        }
+                                        href={'/categoria/' + nav.text}
+
                                     >
                                         {nav.text}
-                                    </Anchor>
+                                    </a>
                                     {nav?.submenu && (
                                         <SubMenuMobile menu={nav.submenu} />
                                     )}
