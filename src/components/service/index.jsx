@@ -22,14 +22,10 @@ const Service = ({ title, subtitle, path, description, image }) => (
                     <Anchor path={path}>{title}</Anchor>
                 </h4>
                 <p className="description">{description}</p>
-                <Anchor className="read-more-button" path={path}>
-                    <i className="feather-arrow-right" />
-                </Anchor>
+
             </div>
         </div>
-        <Anchor className="over-link" path={path}>
-            <span className="visually-hidden">Click here to read more</span>
-        </Anchor>
+
     </div>
 );
 
