@@ -10,6 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head />
+                <link res="shortcut icon" href="/Logo-Puro-Musculos-negro.png" />
                 <body>
                     <Main />
                     <NextScript />
