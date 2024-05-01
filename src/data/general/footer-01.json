@@ -23,8 +23,8 @@
             },
             {
                 "id": 2,
-                "text": "High-Peptidos",
-                "path": "/categoria/High-Peptidos"
+                "text": "Hgh-Peptidos",
+                "path": "/categoria/Hgh-Peptido"
             },
             {
                 "id": 3,
@@ -38,8 +38,8 @@
             },
             {
                 "id": 5,
-                "text": "Quemar Grasas",
-                "path": "/categoria/quemar grasas"
+                "text": "Quema Grasas",
+                "path": "/categoria/quema grasas"
             },
             {
                 "id": 6,
