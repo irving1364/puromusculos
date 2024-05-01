@@ -22,7 +22,7 @@ const ContactFormArea = ({ space, className }) => (
                     <div className="connect-thumbnail">
                         <div className="left-image">
                             <Image
-                                src="/images/contact/contact1.png"
+                                src="/nueva/herba.png"
                                 alt="Nft_Profile"
                                 width={669}
                                 height={686}

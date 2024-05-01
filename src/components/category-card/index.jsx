@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
+import { GiMedicines } from "react-icons/gi";
 
 const CategoryCard = ({ className, icon, title, path }) => (
     <Anchor className={clsx("category-style-one", className)} path={path}>
-        <i className={icon} />
+        <h2><GiMedicines /></h2>
         <span className="category-label">{title}</span>
     </Anchor>
 );

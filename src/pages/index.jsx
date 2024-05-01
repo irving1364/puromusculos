@@ -62,6 +62,8 @@ const Home = ({ agregarCarrito }) => {
                     }}
                 />
 
+                <ServiceArea data={content["service-section"]} />
+
                 {/*   
                 <ExploreProductArea
                     data={{

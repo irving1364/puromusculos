@@ -22,14 +22,14 @@
             "buttons": [
                 {
                     "id": 1,
-                    "content": "Tienda",
-                    "path": "/"
+                    "content": "Destacados",
+                    "path": "/categoria/Destacados"
                 },
                 {
                     "id": 2,
                     "color": "primary-alta",
                     "content": "Contactanos",
-                    "path": "/"
+                    "path": "/contact"
                 }
             ],
             "image": {
@@ -100,37 +100,37 @@
                 {
                     "id": 1,
                     "title": "Ciclos",
-                    "path": "/",
+                    "path": "/categoria/Ciclos",
                     "icon": "feather-search"
                 },
                 {
                     "id": 2,
-                    "title": "High-Peptidos",
-                    "path": "/",
+                    "title": "Hgh-Peptido",
+                    "path": "/categoria/Hgh-Peptido",
                     "icon": "feather-search"
                 },
                 {
                     "id": 3,
                     "title": "Inyectable",
-                    "path": "/",
+                    "path": "/categoria/Inyectable",
                     "icon": "feather-search"
                 },
                 {
                     "id": 4,
                     "title": "Orales",
-                    "path": "/",
+                    "path": "/categoria/Orales",
                     "icon": "feather-search"
                 },
                 {
                     "id": 5,
-                    "title": "Quemar Grasas",
-                    "path": "/",
+                    "title": "Quema Grasas",
+                    "path": "/categoria/Quema Grasas",
                     "icon": "feather-search"
                 },
                 {
                     "id": 6,
                     "title": "Sarms",
-                    "path": "/",
+                    "path": "/categoria/Sarms",
                     "icon": "feather-search"
                 }
             ]
@@ -144,39 +144,39 @@
         {
             "section": "service-section",
             "section_title": {
-                "title": "Create and sell your NFTs"
+                "title": "Pasos para realizar tu pedido"
             },
             "items": [
                 {
                     "id": 1,
-                    "title": "Set up your wallet",
+                    "title": "Busca tu producto",
                     "path": "/",
-                    "subtitle": "Step-01",
-                    "description": "Powerful features and inclusions, which makes Nuron standout, easily customizable and scalable.",
+                    "subtitle": "Paso 1",
+                    "description": "Puedes ingresar a las categorias del menu o si sabes que buscar, ingresa el nombre en el buscador.",
                     "images": [
                         {
-                            "src": "/images/icons/shape-7.png"
+                            "src": "/images/icons/search.png"
                         }
                     ]
                 },
                 {
                     "id": 2,
-                    "title": "Create your collection",
+                    "title": "Agrega al Carrito",
                     "path": "/",
-                    "subtitle": "Step-02",
-                    "description": "A great collection of beautiful website templates for your need. Choose the best suitable template.",
+                    "subtitle": "Paso 2",
+                    "description": "Puedes ir agregando al carrito y cuando estes sastifecho con el ir a realizar el pedido.",
                     "images": [
                         {
-                            "src": "/images/icons/shape-1.png"
+                            "src": "/images/icons/shape-2.png"
                         }
                     ]
                 },
                 {
                     "id": 3,
-                    "title": "Add your NFT's",
+                    "title": "Realizar el pedido",
                     "path": "/connect",
-                    "subtitle": "Step-03",
-                    "description": "We've made the template fully responsive, so it looks great on all devices: desktop, tablets and.",
+                    "subtitle": "Paso 3",
+                    "description": "Para completar el pedido solo te pediremos datos personales, te llegara un correo y podras enviar la cotización por whatsapp.",
                     "images": [
                         {
                             "src": "/images/icons/shape-5.png"
@@ -185,13 +185,13 @@
                 },
                 {
                     "id": 4,
-                    "title": "Sell Your NFT's",
+                    "title": "Nos pondremos en Contacto con usted",
                     "path": "/creator",
-                    "subtitle": "Step-04",
-                    "description": "I throw myself down among the tall grass by the stream as I lie close to the earth NFT's.",
+                    "subtitle": "Paso 4",
+                    "description": "En la brevedad posible y luego de validar su pedido, nos pondremos en contacto para que pueda realizar el pago correspondiente y enviar su Pedido.",
                     "images": [
                         {
-                            "src": "/images/icons/shape-6.png"
+                            "src": "/images/icons/shape-7.png"
                         }
                     ]
                 }
