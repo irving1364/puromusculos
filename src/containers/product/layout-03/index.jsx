@@ -34,6 +34,7 @@ const ProductArea = ({ space, className, data }) => (
                             title={prod.name}
                             slug={prod.slug}
                             latestBid="34"
+                            regular_price={prod.regular_price}
                             price={prod.price}
                             prod={prod}
                             auction_date={prod.auction_date}

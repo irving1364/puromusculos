@@ -13,6 +13,7 @@ import { FaCartPlus } from "react-icons/fa";
 const Product = ({
     title,
     slug,
+    regular_price,
     price,
     latestBid,
     image,
@@ -50,6 +51,10 @@ const Product = ({
                             <div className="product-share-wrapper">
 
                                 <div className="last-bid">
+                                    {price != regular_price &&
+                                        <strike><span className="latest-bid"> {regular_price} € <span> </span></span></strike>
+                                    }
+
                                     {price}
                                     €
                                 </div>

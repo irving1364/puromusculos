@@ -47,6 +47,14 @@ const ProductDetailsArea = ({ space, className, product, agregarCarrito }) => {
                             <span className="bid">
 
                                 <h4 className="price">
+
+                                    {product.price != product.regular_price &&
+                                        <strike><span className="latest-bid"> {product.regular_price} €</span></strike>
+
+                                    }
+
+
+
                                     {product.price} €
                                 </h4>
                             </span>
