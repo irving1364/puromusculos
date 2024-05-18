@@ -7,7 +7,7 @@ const SEO = ({ pageTitle }) => {
         <Head>
             <title>{title}</title>
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <meta name="description" content="Potencia tu Rendimiento" />
+            <meta name="description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Sarms | Inyectables | Orales | Hgh-peptido | Quema Grasas | Ciclos" />
             <meta name="google-site-verification" content="_cMogX_DIPquudlQWQo1Fx0uPtI4ncWINi-erlnxWqM" />
             <meta
                 name="viewport"
