@@ -8,7 +8,7 @@ const SEO = ({ pageTitle }) => {
             <title>{title}</title>
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
             <meta name="description" content="Potencia tu Rendimiento" />
-            
+            <meta name="google-site-verification" content="_cMogX_DIPquudlQWQo1Fx0uPtI4ncWINi-erlnxWqM" />
             <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
