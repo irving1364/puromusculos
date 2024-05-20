@@ -63,6 +63,7 @@ const MyApp = ({ Component, pageProps }) => {
         if (productosGlobal.some((articulo) => articulo.id === producto.id)) {
             //  console.log("duplicado")
             producto.cantidad = producto.cantidad + 1;
+            producto.precioTotal = producto.price * producto.cantidad;
 
             const productosActualizado = productosGlobal.filter((articulo) => articulo.id !== producto.id);
 
@@ -72,6 +73,8 @@ const MyApp = ({ Component, pageProps }) => {
             toast("Producto existente, se aumenta la Cantidad");
         } else {
             producto.cantidad = 1;
+            producto.precioTotal = producto.price * producto.cantidad;
+
             setProductosGlobal([...productosGlobal, producto]);
             setTotal(productosGlobal.length);
 

@@ -2,7 +2,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 
 const SEO = ({ pageTitle }) => {
-    const title = `${pageTitle} || Puro Musculo`;
+    const title = `${pageTitle} || Puro Musculos`;
     return (
         <Head>
             <title>{title}</title>

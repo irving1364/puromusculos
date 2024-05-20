@@ -67,7 +67,7 @@ const NotificationArea = ({ data }) => {
         for (var i = 0; i < prodsCart.length; i++) {
             prodItems[i] = {};
             prodItems[i].product_id = prodsCart[i].id;
-            prodItems[i].quantity = prodsCart[i].quantity;
+            prodItems[i].quantity = prodsCart[i].cantidad;
             prodItems[i].sku = "0";
         }
 
@@ -143,7 +143,7 @@ const NotificationArea = ({ data }) => {
 
             for (var i = 0; i < prodsCart.length; i++) {
 
-                mensajeProd = mensajeProd + prodsCart[i].name + "%20" + prodsCart[i].price + "%0A";
+                mensajeProd = mensajeProd + prodsCart[i].name + "," + "%20" + "Precio Unidad: " + prodsCart[i].price + ", Cantidades: " + prodsCart[i].cantidad + ", Precio Total: " + prodsCart[i].precioTotal + "%0A";
             }
 
             mensajeProd = mensajeProd + "Envio " + "%20" + "15.00" + "%0A";
@@ -203,7 +203,7 @@ const NotificationArea = ({ data }) => {
     console.log(data);
 
     let total = 0;
-    for (let i = 0; i < data.productos.length; i++) total += Number(data.productos[i].price);
+    for (let i = 0; i < data.productos.length; i++) total += Number(data.productos[i].precioTotal);
 
     console.log(total);
 

@@ -64,6 +64,7 @@ const ProductArea = ({ className, space, data }) => {
                                                 authors="{prod.authors}"
                                                 bitCount="{prod.bitCount}"
                                                 cantidad={prod.cantidad}
+                                                precioTotal={prod.precioTotal}
                                                 producto={prod}
                                                 eliminarProducto={data.eliminarProducto}
                                             />

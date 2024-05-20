@@ -17,6 +17,7 @@ const Product = ({
     likeCount,
     className,
     cantidad,
+    precioTotal,
     producto,
     eliminarProducto
 }) => {
@@ -55,10 +56,12 @@ const Product = ({
                                 </div>
                             </div>
                             <Anchor path={`/product/${slug}`}>
-                                <h6 className="title">{title}</h6>
+                                <h4 className="title">{title}</h4>
                             </Anchor>
-
-
+                            
+                            <h6 className="title">Cantidad: {cantidad}</h6>
+                            <h6 className="title">Total: {precioTotal}</h6>
+                            
                             {/* 
                             <div className="share-wrapper d-flex">
                                 <div className="react-area mr--15">
