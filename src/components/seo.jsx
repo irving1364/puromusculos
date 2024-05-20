@@ -13,9 +13,9 @@ const SEO = ({ pageTitle, url }) => {
             <meta property="og:site_name"  content="Puro Musculos"></meta>
 
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <meta name="description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos" />
-            <meta property="og:description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos"></meta>
-            <meta name="keywords" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos"></meta> 
+            <meta name="description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Productos Ciclos" />
+            <meta property="og:description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Productos Ciclos"></meta>
+            <meta name="keywords" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Productos Ciclos"></meta> 
             <meta name="author" content="Irving salcedo - irvng1364@gmail.com"></meta>          
             <meta name="google-site-verification" content="_cMogX_DIPquudlQWQo1Fx0uPtI4ncWINi-erlnxWqM" />
             <meta
