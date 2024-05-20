@@ -9,6 +9,14 @@ const MegaMenu = ({ menu }) => (
                     <div key={nav.id} className="col-lg-3 single-mega-item">
                         {nav?.submenu && (
                             <ul className="mega-menu-item">
+                                
+                                <li >
+                                    <Anchor path="/">
+                                        menu 1
+                                        
+                                    </Anchor>
+                                </li>
+                                
                                 {nav.submenu.map((subnav) => (
                                     <li key={subnav.id}>
                                         <Anchor path={subnav.path}>

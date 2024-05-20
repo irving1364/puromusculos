@@ -43,7 +43,7 @@ const Home = ({ agregarCarrito }) => {
 
     return (
         <Wrapper>
-            <SEO pageTitle="Inicio" />
+            <SEO pageTitle="Inicio" url="https://www.puromusculos.com" />
             <Header />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />

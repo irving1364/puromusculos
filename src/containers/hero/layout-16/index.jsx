@@ -29,12 +29,12 @@ const HeroArea = ({
                             />
                         )}
                         {texts?.[0]?.content && (
-                            <p
+                            <h2
                                 className="disc"
                                 dangerouslySetInnerHTML={{
                                     __html: texts[0].content,
                                 }}
-                            />
+                            ></h2>
                         )}
                         <div className="button-group d-flex flex-wrap">
                             {buttons?.map(({ content, id, ...btn }, i) => (

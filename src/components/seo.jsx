@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 
-const SEO = ({ pageTitle }) => {
+const SEO = ({ pageTitle, url }) => {
     const title = `${pageTitle} || Puro Musculos`;
     return (
         <Head>
@@ -13,9 +13,9 @@ const SEO = ({ pageTitle }) => {
             <meta property="og:site_name"  content="Puro Musculos"></meta>
 
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <meta name="description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Sarms | Inyectables | Orales | Hgh-peptido | Quema Grasas | Ciclos" />
-            <meta property="og:description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Sarms | Inyectables | Orales | Hgh-peptido | Quema Grasas | Ciclos"></meta>
-            <meta name="keywords" content="Puro Musculos, Potencia tu Rendimiento, Sarms , Inyectables , Orales , Hgh-peptido , Quema Grasas , Ciclos"></meta> 
+            <meta name="description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos" />
+            <meta property="og:description" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos"></meta>
+            <meta name="keywords" content="Potencia tu Rendimiento | Ventas online de productos de pontenciadores musculares | Productos Sarms | Directamente Inyectables |Via Orales | Hgh-peptido |El increible Quema Grasas | Nuestro Producto Ciclos"></meta> 
             <meta name="author" content="Irving salcedo - irvng1364@gmail.com"></meta>          
             <meta name="google-site-verification" content="_cMogX_DIPquudlQWQo1Fx0uPtI4ncWINi-erlnxWqM" />
             <meta
@@ -26,6 +26,7 @@ const SEO = ({ pageTitle }) => {
             <meta property="og:image" content="/Logo-Puro-Musculos-negro.png"></meta>
             <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+            <link rel="canonical" href={url} />
 
         </Head>
     );
