@@ -10,6 +10,11 @@ const SubMenuMobile = ({ menu }) => (
                 </a>
             </li>
         ))}
+        <li key={20}>
+            <a href={'/categoria/Inyectables'}>
+                Inyectables
+            </a>
+        </li>
     </ul >
 );
 

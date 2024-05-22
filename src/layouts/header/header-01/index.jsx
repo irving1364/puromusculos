@@ -68,10 +68,6 @@ const Header = ({ className }) => {
     }
 
 
-
-
-
-
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
     const { search, searchHandler } = useFlyoutSearch();

@@ -7,6 +7,7 @@ import CategoryArea from "@containers/category/layout-01";
 import LiveExploreArea from "@containers/live-explore/layout-01";
 import ServiceArea from "@containers/services/layout-01";
 import NewestItmesArea from "@containers/product/layout-04";
+import NewestItmes from "@containers/product/layout-05";
 import TopSellerArea from "@containers/top-seller/layout-01";
 import ExploreProductArea from "@containers/explore-product/layout-01";
 import VideoArea from "@containers/video/layout-01";
@@ -61,6 +62,14 @@ const Home = ({ agregarCarrito }) => {
                         agregarCarrito: agregarCarrito,
                     }}
                 />
+
+<NewestItmes
+                    data={{
+                        ...content["newest-section"],
+                        products: newestData,
+                    }}
+                />
+
 
                 <ServiceArea data={content["service-section"]} />
 

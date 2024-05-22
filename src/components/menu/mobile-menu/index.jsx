@@ -9,6 +9,9 @@ import SubMenuMobile from "./submenumobile";
 import MegaMenu from "./megamenu";
 
 const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
+
+    console.log(menu);
+
     const onClickHandler = (e) => {
         e.preventDefault();
         const { target } = e;
