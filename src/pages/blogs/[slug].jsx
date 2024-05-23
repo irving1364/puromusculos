@@ -4,66 +4,56 @@ import Wrapper from "@layout/wrapper";
 import Header from "@layout/header/header-01";
 import Footer from "@layout/footer/footer-01";
 import Breadcrumb from "@components/breadcrumb";
-import ProductDetailsArea from "@containers/product-details";
-import ProductArea from "@containers/product/layout-03";
-import { shuffleArray } from "@utils/methods";
+import BlogDetailsArea from "@containers/blog-details";
+import CommentsArea from "@containers/comments-area";
+import CommentForm from "@components/comment-form";
+import RelatedPostsArea from "@containers/related-posts";
+import BlogSidebar from "@containers/blog-sidebar";
 
 // demo data
 import productData from "../../data/products.json";
 
-const ProductDetails = ({ prducto, nombre, agregarCarrito }) => {
-
-    console.log(prducto);
-
-    return (
-        <Wrapper>
-            <SEO pageTitle={nombre} />
-            <Header />
-            <main id="main-content">
-                <Breadcrumb
-                    pageTitle={nombre}
-                    currentPage={nombre}
-                />
-
-                <ProductDetailsArea product={prducto} agregarCarrito={agregarCarrito} />
-                {/*
-            <ProductArea
-                data={{
-                    section_title: { title: "Recent View" },
-                    products: recentViewProducts,
-                }}
-            />
-            <ProductArea
-                data={{
-                    section_title: { title: "Related Item" },
-                    products: relatedProducts,
-                }}
-            />*/}
-            </main>
-            <Footer />
-        </Wrapper>
-
-    )
-}
+const BlogDetails = ({ articulo, nombre, agregarCarrito }) => (
+    
+    <Wrapper>
+        <SEO pageTitle={nombre} />
+        <Header />
+        <main id="main-content">
+            <Breadcrumb pageTitle={nombre} currentPage="Blog Detalle" />
+            <div className="rn-blog-area rn-blog-details-default rn-section-gapTop">
+                <div className="container">
+                    <div className="row g-6">
+                        <div className="col-xl-12 col-lg-12">
+                            <BlogDetailsArea post={articulo} />
+                        {/*    <CommentsArea />
+                            <CommentForm />
+                        <RelatedPostsArea relatedPosts={relatedPosts} />*/}
+                        </div>
+                        <div className="col-xl-4 col-lg-4 mt_md--40 mt_sm--40">
+                            {/* <BlogSidebar
+                                categories={categories}
+                                recentPosts={recentPosts}
+                                tags={tags}
+                            />*/}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <Footer />
+    </Wrapper>
+);
 
 export const getServerSideProps = async (context) => {
 
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Basic Y2tfMjU3YTQ2YjgzY2RlNjc3MGY4MWFkZDRkZmM2MjI0YmExOGMxNWY5Mjpjc18xZjlhZThiZjA5MDNmNTZmNjVjZWVhODVjNGY3MmVhMjExNjlhZTli");
 
-    var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
-    const data = await fetch("https://fadimet.com.pa/alberto/index.php/wp-json/wc/v3/products?per_page=99&search=" + context.query.slug + "", requestOptions);
+    const data = await fetch("https://fadimet.com.pa/alberto/wp-json/wp/v2/posts?search=" + context.query.slug + "");
     const result = await data.json();
 
 
     return {
         props: {
-            prducto: result[0],
+            articulo: result[0],
             nombre: context.query.slug,
             className: "template-color-1",
         },
@@ -71,4 +61,4 @@ export const getServerSideProps = async (context) => {
 
 };
 
-export default ProductDetails;
+export default BlogDetails;

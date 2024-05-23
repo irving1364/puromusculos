@@ -16,34 +16,32 @@ const BlogCard = ({
 }) => (
     <div className={clsx("rn-blog", className)} {...rest}>
         <div className="inner">
-            {image?.src && (
                 <div className="thumbnail">
-                    <Anchor path={`${rootPage}/${slug}`}>
-                        <Image
-                            src={image.src}
-                            alt={image?.alt || "Personal Portfolio Images"}
+                    <Anchor path={`/blogs/${title}`}>
+                        <img
+                            src={image}
+                            alt="Imagen blog"
                             width={image?.width ? image.width : 489}
                             height={image?.height ? image.height : 366}
                         />
                     </Anchor>
                 </div>
-            )}
+            
             <div className="content">
                 <div className="category-info">
                     <div className="category-list">
-                        <Anchor path={`${rootPage}/category/${category.slug}`}>
-                            {category.title}
+                        <Anchor path={`/blogs/${title}`}>
+                            Articulo
                         </Anchor>
                     </div>
                     <div className="meta">
                         <span>
-                            <i className="feather-clock" /> {timeToRead} min
-                            read
+                            <i className="feather-clock" /> {timeToRead} min en leer
                         </span>
                     </div>
                 </div>
                 <h4 className="title">
-                    <Anchor path={`${rootPage}/${slug}`}>
+                    <Anchor path={`/blogs/${title}`}>
                         {title}
                         <i className="feather-arrow-up-right" />
                     </Anchor>

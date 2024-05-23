@@ -93,7 +93,7 @@ import { useEffect, useState } from "react";
                             className="product-style-one no-overlay with-placeBid"
                         >
                             <div className="card-thumbnail">
-                                    <Anchor path={`/product/`}>
+                                    <Anchor path={`/blogs/${prod.title.rendered}`}>
                                         <img
                                             src={prod.featured_media_src_url}
                                             alt="NFT_portfolio"
@@ -107,7 +107,7 @@ import { useEffect, useState } from "react";
                             <div className="product-share-wrapper">
 
                             </div>
-                            <Anchor path={`/product/${prod.slug}`}>
+                            <Anchor path={`/blogs/${prod.title.rendered}`}>
                                 <span className="product-name">{prod.title.rendered}</span>
                             </Anchor>
                             <span className="latest-bid"  dangerouslySetInnerHTML={{ __html: prod.excerpt.rendered }}></span>

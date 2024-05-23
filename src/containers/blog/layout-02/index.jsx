@@ -13,7 +13,7 @@ const BlogArea = ({ space, className, data }) => (
     >
         <div className="container">
             <div className="row g-5">
-                {data?.posts?.map((post) => (
+                {data?.map((post) => (
                     <div
                         className="col-xl-3 col-lg-4 col-md-6 col-12"
                         data-sal="slide-up"
@@ -22,22 +22,22 @@ const BlogArea = ({ space, className, data }) => (
                         key={post.slug}
                     >
                         <BlogCard
-                            title={post.title}
+                            title={post.title.rendered}
                             slug={post.slug}
-                            category={post.category}
-                            timeToRead={post.timeToRead}
-                            image={post.image}
+                            category="asdasd"
+                            timeToRead="2"
+                            image={post.featured_media_src_url}
                         />
                     </div>
                 ))}
             </div>
-            {data.pagiData?.numberOfPages > 1 && (
+            {/*data.pagiData?.numberOfPages > 1 && (
                 <Pagination
                     currentPage={data.pagiData.currentPage}
                     numberOfPages={data.pagiData.numberOfPages}
                     rootPage="/blog"
                 />
-            )}
+            )*/}
         </div>
     </div>
 );
