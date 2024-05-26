@@ -2,10 +2,10 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 
 const SEO = ({ pageTitle, url }) => {
-    const title = `${pageTitle} || Puro Musculos`;
+    const title = `${pageTitle} || Puromusculos`;
     return (
         <Head>
-            <title>Puro Musculos | {pageTitle}</title>
+            <title>Puromusculos | {pageTitle}</title>
             <meta property="og:title" content="Puro Musculos | Potencia tu Rendimiento "></meta>
             <meta property="og:type" content="website" ></meta>
             <meta property="og:url" content="https://www.puromusculos.com" ></meta>
